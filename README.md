@@ -177,9 +177,11 @@ GET	/health	Health check for ALB	200 OK
 
 Sample Request/Response:
 // POST /api/v1/shorten
+```json
 {
     "longUrl": "https://example.com/very/long/url/that/needs/shortening"
 }
+```
 
 // Response (202 Accepted)
 ```json
@@ -191,10 +193,12 @@ Sample Request/Response:
 ```
 
 // GET /api/v1/stats/abc123
+```json
 {
     "shortCode": "abc123",
     "longUrl": "https://example.com/very/long/url/that/needs/shortening",
     "clickCount": 42,
     "createdAt": "2024-01-15T10:30:00Z"
 }
+```
 
