@@ -166,7 +166,7 @@ public class Url {
     
     // getters, setters, constructors
 }
-
+```
 
 🔌 API Endpoints (Planned)
 Method	Endpoint	Description	Status Code
@@ -182,11 +182,13 @@ Sample Request/Response:
 }
 
 // Response (202 Accepted)
+```json
 {
     "shortUrl": "http://localhost:8080/abc123",
     "shortCode": "abc123",
     "message": "URL shortening in progress"
 }
+```
 
 // GET /api/v1/stats/abc123
 {
