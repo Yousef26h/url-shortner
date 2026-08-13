@@ -146,59 +146,5 @@ URL-SHORTENER/
 
 **Indexes:** `short_code` (unique) | `created_at` (for archival).
 
-**JPA Entity Example:**
-```java
-@Entity
-@Table(name = "urls")
-public class Url {
-    @Id
-    private Long id;
-    
-    @Column(unique = true, length = 10)
-    private String shortCode;
-    
-    @Column(columnDefinition = "TEXT")
-    private String longUrl;
-    
-    private LocalDateTime createdAt;
-    private Integer ttl;
-    private Integer clickCount;
-    
-    // getters, setters, constructors
-}
-```
-
-🔌 API Endpoints (Planned)
-Method	Endpoint	Description	Status Code
-POST	/api/v1/shorten	Shorten a URL (async)	202 Accepted
-GET	/{short_code}	Redirect to long URL	302 Found
-GET	/api/v1/stats/{short_code}	Get click count	200 OK
-GET	/health	Health check for ALB	200 OK
-
-Sample Request/Response:
-// POST /api/v1/shorten
-```json
-{
-    "longUrl": "https://example.com/very/long/url/that/needs/shortening"
-}
-```
-
-// Response (202 Accepted)
-```json
-{
-    "shortUrl": "http://localhost:8080/abc123",
-    "shortCode": "abc123",
-    "message": "URL shortening in progress"
-}
-```
-
-// GET /api/v1/stats/abc123
-```json
-{
-    "shortCode": "abc123",
-    "longUrl": "https://example.com/very/long/url/that/needs/shortening",
-    "clickCount": 42,
-    "createdAt": "2024-01-15T10:30:00Z"
-}
 ```
 
