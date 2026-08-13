@@ -84,50 +84,53 @@ Client -> GET /{short_code}
 ---
 
 ## 📂 Project Structure (Planned)
+```
 URL-SHORTENER/
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ └── com/urlshortener/
-│ │ │ ├── UrlShortenerApplication.java
-│ │ │ ├── controller/
-│ │ │ │ ├── UrlController.java
-│ │ │ │ └── HealthController.java
-│ │ │ ├── service/
-│ │ │ │ ├── UrlService.java
-│ │ │ │ ├── AsyncUrlService.java
-│ │ │ │ └── StatsService.java
-│ │ │ ├── repository/
-│ │ │ │ └── UrlRepository.java
-│ │ │ ├── cache/
-│ │ │ │ └── CacheConfig.java
-│ │ │ ├── model/
-│ │ │ │ ├── Url.java
-│ │ │ │ └── UrlDTO.java
-│ │ │ ├── util/
-│ │ │ │ ├── Base62Encoder.java
-│ │ │ │ └── SnowflakeIdGenerator.java
-│ │ │ └── config/
-│ │ │ ├── AsyncConfig.java
-│ │ │ └── RedisConfig.java
-│ │ └── resources/
-│ │ ├── application.yml
-│ │ ├── application-dev.yml
-│ │ ├── application-prod.yml
-│ │ ├── db/
-│ │ │ └── migration/
-│ │ │ └── V1__create_urls_table.sql
-│ │ └── logback-spring.xml
-│ └── test/
-│ └── java/
-│ └── com/urlshortener/
-│ └── UrlControllerTest.java
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── urlshortener
+│   │   │           ├── UrlShortenerApplication.java
+│   │   │           ├── controller
+│   │   │           │   ├── UrlController.java
+│   │   │           │   └── HealthController.java
+│   │   │           ├── service
+│   │   │           │   ├── UrlService.java
+│   │   │           │   ├── AsyncUrlService.java
+│   │   │           │   └── StatsService.java
+│   │   │           ├── repository
+│   │   │           │   └── UrlRepository.java
+│   │   │           ├── cache
+│   │   │           │   └── CacheConfig.java
+│   │   │           ├── model
+│   │   │           │   ├── Url.java
+│   │   │           │   └── UrlDTO.java
+│   │   │           ├── util
+│   │   │           │   ├── Base62Encoder.java
+│   │   │           │   └── SnowflakeIdGenerator.java
+│   │   │           └── config
+│   │   │               ├── AsyncConfig.java
+│   │   │               └── RedisConfig.java
+│   │   └── resources
+│   │       ├── application.yml
+│   │       ├── application-dev.yml
+│   │       ├── application-prod.yml
+│   │       ├── db
+│   │       │   └── migration
+│   │       │       └── V1__create_urls_table.sql
+│   │       └── logback-spring.xml
+│   └── test
+│       └── java
+│           └── com
+│               └── urlshortener
+				   └── UrlControllerTest.java
 ├── docker-compose.yml
 ├── Dockerfile
-├── pom.xml (or build.gradle)
+├── pom.xml
 ├── .env.example
 └── README.md
-
+```
 
 ---
 
